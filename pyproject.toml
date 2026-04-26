@@ -1,0 +1,19 @@
+[project]
+name = "readme-transactions"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "psycopg2-binary",
+    "python-jose[cryptography]",
+    "python-dotenv",
+    "pydantic-settings",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ms6_transactions
+      POSTGRES_USER: readme
+      POSTGRES_PASSWORD: readme123
+    ports:
+      - "5434:5432"
+    networks:
+      - readme_net
+
+networks:
+  readme_net:
+    external: true
