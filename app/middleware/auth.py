@@ -4,7 +4,7 @@ from jose import jwt, JWTError
 from starlette.middleware.base import BaseHTTPMiddleware
 from app.core.config import settings
 
-UNPROTECTED_PATHS = {"/docs", "/openapi.json", "/redoc"}
+UNPROTECTED_PATHS = {"/docs", "/openapi.json", "/redoc", "/health"}
 
 
 class JWTMiddleware(BaseHTTPMiddleware):
