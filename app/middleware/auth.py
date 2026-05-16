@@ -13,7 +13,7 @@ class JWTMiddleware(BaseHTTPMiddleware):
             return await call_next(request)
 
         if request.url.path.startswith("/api/export"):
-            admin_key = request.headers.get("X-Admin-Key", "")
+            admin_key = request.headers.get("X-API-Key", "")
             if admin_key != settings.ADMIN_KEY:
                 return JSONResponse(status_code=401, content={"error": "unauthorized"})
             return await call_next(request)
